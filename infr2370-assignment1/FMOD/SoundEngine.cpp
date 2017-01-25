@@ -80,6 +80,14 @@ Sound::Sound()
 	vel = { 0.0f, 0.0f, 0.0f };
 }
 
+Sound::Sound(FMOD_VECTOR a_pos)
+{
+	sound = NULL;
+	channel = NULL;
+	pos = a_pos;
+	vel = { 0.0f, 0.0f, 0.0f };
+}
+
 Sound::~Sound()
 {
 	result = sound->release();						CheckResult(result);

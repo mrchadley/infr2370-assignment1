@@ -38,6 +38,7 @@ class Sound
 {
 public:
 	Sound();
+	Sound(FMOD_VECTOR a_pos);
 	~Sound();
 
 	bool Load(char* filename);
