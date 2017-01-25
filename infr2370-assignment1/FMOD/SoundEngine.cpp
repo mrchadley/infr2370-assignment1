@@ -115,6 +115,12 @@ void Sound::Play()
 	result = channel->setPaused(false);											CheckResult(result);
 }
 
+void Sound::SetPos(FMOD_VECTOR a_pos)
+{
+	pos = a_pos;
+	result = channel->set3DAttributes(&pos, &vel);								CheckResult(result);
+}
+
 void Sound::SystemUpdate()
 {
 	sys.Update();

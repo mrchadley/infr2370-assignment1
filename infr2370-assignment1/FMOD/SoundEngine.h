@@ -43,6 +43,7 @@ public:
 
 	bool Load(char* filename);
 	void Play();
+	void SetPos(FMOD_VECTOR a_pos);
 
 	static void SystemUpdate();
 

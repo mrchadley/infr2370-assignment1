@@ -12,10 +12,19 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
+
+#define PI 3.14159265
 
 const GLint WIDTH = 800, HEIGHT = 600;
 
-float startTime = 0, deltaTime = 0;
+FMOD_VECTOR RotateSound(int step)
+{
+	int angle = 90 + 5 * step;
+	
+	return { 2*cosf(angle*PI / 180), 2*sinf(angle*PI / 180), 0 };
+
+}
 
 int main()
 {
@@ -66,9 +75,14 @@ int main()
 
 	sound.Play();
 	
-	double start;
+	float start, delta = 0;
+
+	float timer = 0;
+	int step = 0;
+
 	while (!glfwWindowShouldClose(window))
 	{
+		start = clock();
 		glfwPollEvents();
 
 		glClearColor(0.3f, 0.1f, 0.3f, 1.0f);
@@ -76,9 +90,21 @@ int main()
 
 		//draw opengl stuff
 
+		sound.SetPos(RotateSound(step));
+
 		Sound::SystemUpdate();
 
 		glfwSwapBuffers(window);
+
+		if (timer >= 0.5f)
+		{
+			step++;
+			timer = 0.0f;
+		}
+
+		delta = (clock() - start) / 1000;
+		timer += delta;
+		std::cout << timer << std::endl;
 	}
 
 	glfwTerminate();
