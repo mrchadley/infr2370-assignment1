@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A662A06F-9904-4B1B-9240-B5F4066309AB}</ProjectGuid>
+    <ProjectGuid>{95D80410-C4DC-4809-AE2B-3E12B6739B39}</ProjectGuid>
     <RootNamespace>infr2370assignment1</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -97,7 +97,6 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -115,10 +114,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FMOD\SoundEngine.cpp" />
+    <ClCompile Include="jnaut\graphics\Window.cpp" />
+    <ClCompile Include="jnaut\math\Vector3.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FMOD\SoundEngine.h" />
+    <ClInclude Include="jnaut\graphics\Window.h" />
+    <ClInclude Include="jnaut\math\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
