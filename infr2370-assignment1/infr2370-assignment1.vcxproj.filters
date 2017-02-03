@@ -24,7 +24,10 @@
     <ClCompile Include="jnaut\graphics\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="jnaut\math\Vector3.cpp">
+    <ClCompile Include="Shaders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_obj_loader.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,8 +38,21 @@
     <ClInclude Include="jnaut\graphics\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="jnaut\math\Vector3.h">
+    <ClInclude Include="Shaders.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tiny_obj_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jnaut\FileUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jnaut\JnautStructs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="simple_fragment_shader.fshd" />
+    <None Include="simple_vertex_shader.vshd" />
   </ItemGroup>
 </Project>
