@@ -44,6 +44,7 @@ public:
 	bool Load(char* filename);
 	void Play();
 	void SetPos(FMOD_VECTOR a_pos);
+	inline FMOD_VECTOR GetPos() { return pos; }
 
 	static void SystemUpdate();
 
